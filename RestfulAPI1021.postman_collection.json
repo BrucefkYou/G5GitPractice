@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "c6353a9d-ab7c-4d04-bd63-24a4959beebd",
+		"name": "RestfulAPI1021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37535381"
+	},
+	"item": [
+		{
+			"name": "新增使用者",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "Edward11",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "213",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "name1",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "mail1",
+							"type": "text"
+						},
+						{
+							"key": "head",
+							"value": "4444.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新使用者",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "name2",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "mail2",
+							"type": "text"
+						},
+						{
+							"key": "head",
+							"value": "44442.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/Edward",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"Edward"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除使用者",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/Edward11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"Edward11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜尋使用者",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/users/search?id=ny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ny"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "ben",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "a12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者登出",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYmVuIiwibmFtZSI6IkJlbiBDaGVuIDIiLCJtYWlsIjoiYmVuQGdtYWlsLmNvbSIsImhlYWQiOiJodHRwczovL3JhbmRvbXVzZXIubWUvYXBpL3BvcnRyYWl0cy9tZW4vNTguanBnIiwiaWF0IjoxNzI5NTY0NTYzLCJleHAiOjE3Mjk1NjQ1NTN9.Aaj2uaOz6LnJVBhBRA8g4orJVsLTzrkANhPpcLlaNlY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "使用者狀態檢查",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYmVuIiwibmFtZSI6IkJlbiBDaGVuIDIiLCJtYWlsIjoiYmVuQGdtYWlsLmNvbSIsImhlYWQiOiJodHRwczovL3JhbmRvbXVzZXIubWUvYXBpL3BvcnRyYWl0cy9tZW4vNTguanBnIiwiaWF0IjoxNzI5NTY0NTYzLCJleHAiOjE3Mjk1NjQ1NTN9.Aaj2uaOz6LnJVBhBRA8g4orJVsLTzrkANhPpcLlaNlY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "獲取所有使用者",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "獲取單一使用者",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/benny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"benny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "檢查帳號",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/account?account=ben",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"account"
+					],
+					"query": [
+						{
+							"key": "account",
+							"value": "ben"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "檢查信箱",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "account",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1qaz",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
